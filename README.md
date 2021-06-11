@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# react-http-practice
 
 A react practice project learn from Max on Udemy.
 
