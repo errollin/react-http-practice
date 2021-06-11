@@ -5,20 +5,6 @@ import AddMovie from "./components/AddMovie";
 import MoviesList from "./components/MoviesList";
 
 function App() {
-  // const dummyMovies = [
-  //   {
-  //     id: 1,
-  //     title: "Some Dummy Movie",
-  //     openingText: "This is the opening text of the movie",
-  //     releaseDate: "2021-05-18",
-  //   },
-  //   {
-  //     id: 2,
-  //     title: "Some Dummy Movie 2",
-  //     openingText: "This is the second opening text of the movie",
-  //     releaseDate: "2021-05-19",
-  //   },
-  // ];
 
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -34,20 +20,6 @@ function App() {
           method: "GET",
         }
       );
-      // .then((response) => {
-      //   return response.json();
-      // })
-      // .then((data) => {
-      //   const transformedMovies = data.results.map((movieDate) => {
-      //     return {
-      //       id: movieDate.episode_id,
-      //       title: movieDate.title,
-      //       openingText: movieDate.opening_crawl,
-      //       releaseDate: movieDate.release_date,
-      //     };
-      //   });
-      //   setMovies(transformedMovies);
-      // });
       if (!response.ok) {
         throw new Error("Something went wrong!");
       }
